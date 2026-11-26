@@ -10,22 +10,28 @@ const TYPING_WORDS = ["Software Engineer", "Systems Developer", "Machine Learnin
 
 const FEATURED_PROJECTS = [
     {
-        id: "p1", title: "Choreographer OS", category: "systems",
-        desc: "A lightweight, preemptive multitasking Operating System kernel built from scratch for x86 architecture. Implements paging, IPC, and custom FAT-like filesystem.",
-        tags: ["C", "x86 Assembly", "Make", "QEMU"],
-        github: "https://github.com", demo: null
+        id: "p3", title: "Seeker AI", category: "ai",
+        desc: "An intelligent AI-powered seeker application built with React and TypeScript for smart search, discovery, and information retrieval.",
+        tags: ["TypeScript", "React", "Vite", "AI/ML"],
+        github: "https://github.com/Faizanbhattiii/SEEKER_AI", demo: null
     },
     {
-        id: "p2", title: "Git-Visualizer", category: "web",
-        desc: "An interactive, web-based tool that visualizes git commit trees, branches, and merges in real-time. Features interactive rebasing drills for students.",
-        tags: ["TypeScript", "React", "D3.js", "Node.js"],
-        github: "https://github.com", demo: "https://example.com"
+        id: "p6", title: "AI Driving Assistant", category: "ai",
+        desc: "An AI-powered mobile driving assistant built with Flutter and Dart to provide real-time driving guidance and intelligent navigation support.",
+        tags: ["Dart", "Flutter", "Computer Vision", "AI/ML"],
+        github: "https://github.com/Faizanbhattiii/AI-Driving-assistant", demo: null
     },
     {
-        id: "p3", title: "NeuralArt-Transfer", category: "ai",
-        desc: "A deep neural style transfer pipeline implemented in PyTorch that allows users to stylize videos while maintaining temporal consistency across frames.",
-        tags: ["Python", "PyTorch", "OpenCV", "Docker"],
-        github: "https://github.com", demo: null
+        id: "p7", title: "TaskFlow Platform", category: "web",
+        desc: "A full-stack task management application engineered with React 18, Vite, Express, Tailwind CSS, and Cloudinary with focus on performance and accessibility.",
+        tags: ["React 18", "Express", "Tailwind CSS", "Cloudinary"],
+        github: "https://github.com/Faizanbhattiii/TaskFlow-Full-Stack-Task-Management-Platform", demo: null
+    },
+    {
+        id: "p8", title: "World Explorer", category: "web",
+        desc: "A responsive React single-page application showcasing full network request lifecycle management, search, and filtering with a live public API.",
+        tags: ["JavaScript", "React", "REST API", "Search & Filter"],
+        github: "https://github.com/Faizanbhattiii/live-data-app", demo: null
     },
 ];
 
@@ -133,7 +139,7 @@ function ContactForm() {
                 <div className="success-message">
                     <div className="success-icon"><i className="fa-solid fa-circle-check"></i></div>
                     <h4 className="success-title">Message Sent!</h4>
-                    <p className="success-desc">Thank you for reaching out. Alex will get back to you shortly.</p>
+                    <p className="success-desc">Thank you for reaching out. Muhammad Faizan Bhatti will get back to you shortly.</p>
                     <button className="btn btn-secondary btn-sm" onClick={() => { setSubmitted(false); setForm({ name: "", email: "", subject: "", message: "" }); }}>
                         Send another message
                     </button>
@@ -157,11 +163,11 @@ function Home() {
                             <span className="terminal-prompt">~</span> Welcome to my space
                         </div>
                         <h1 className="hero-title">
-                            Hey, I'm <span className="accent-text">Alex Chen</span>
+                            Hey, I'm <span className="accent-text">Muhammad Faizan Bhatti</span>
                         </h1>
                         <Typewriter />
                         <p className="hero-bio">
-                            CS Student @ Stanford University. I build scalable software systems, design ML pipelines, and write neat, efficient code. Passionate about open source and systems engineering.
+                            CS Student @ Bahria University Islamabad. I build scalable software systems, design ML pipelines, and write neat, efficient code. Passionate about open source and systems engineering.
                         </p>
                         <div className="hero-ctas">
                             <Link to="/projects" className="btn btn-primary" id="hero-btn-projects">
@@ -181,7 +187,7 @@ function Home() {
                             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-link-item" id="social-twitter" title="Twitter">
                                 <i className="fa-brands fa-x-twitter"></i>
                             </a>
-                            <a href="mailto:alex@example.com" className="social-link-item" id="social-email" title="Email Me">
+                            <a href="mailto:muhammad.bhatti486@gmail.com" className="social-link-item" id="social-email" title="Email Me">
                                 <i className="fa-solid fa-envelope"></i>
                             </a>
                         </div>
@@ -190,7 +196,7 @@ function Home() {
                     <div className="hero-visual">
                         <div className="avatar-wrapper">
                             <div className="avatar-glow"></div>
-                            <img src={avatarImg} alt="Alex Chen's Avatar" className="avatar-img" id="avatar" />
+                            <img src={avatarImg} alt="Muhammad Faizan Bhatti's Avatar" className="avatar-img" id="avatar" />
                         </div>
                     </div>
                 </div>
@@ -216,46 +222,19 @@ function Home() {
                 </div>
             </section>
 
-            {/* Experience Timeline Section */}
+            {/* Certifications Timeline Section */}
             <section className="experience-section" id="experience" style={{ paddingTop: "80px" }}>
-                <h2 className="section-title"><span className="section-num">02.</span> Experience</h2>
+                <h2 className="section-title"><span className="section-num">02.</span> Certifications</h2>
                 <div className="timeline">
                     <div className="timeline-item">
                         <div className="timeline-dot"></div>
-                        <div className="timeline-date">Jun 2025 - Sep 2025</div>
+                        <div className="timeline-date">Ongoing</div>
                         <div className="timeline-content glass-panel">
-                            <h3 className="timeline-title">Software Engineer Intern <span className="text-cyan">@ TechCorp</span></h3>
-                            <p className="timeline-subtitle">Cloud Operations Team</p>
+                            <h3 className="timeline-title">Deep Learning Specialization <span className="text-purple">@ Coursera</span></h3>
+                            <p className="timeline-subtitle">DeepLearning.AI</p>
                             <ul className="timeline-bullets">
-                                <li>Optimized internal microservices communication using gRPC, reducing service latency by 18%.</li>
-                                <li>Designed and containerized CI/CD testing environments with Docker, cutting deployment times from 40 to 15 minutes.</li>
-                                <li>Built an automated monitoring dashboard in React and Grafana to track server status across multiple regions.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div className="timeline-item">
-                        <div className="timeline-dot"></div>
-                        <div className="timeline-date">Sep 2024 - Present</div>
-                        <div className="timeline-content glass-panel">
-                            <h3 className="timeline-title">Head Teaching Assistant <span className="text-purple">@ Stanford CS Dept</span></h3>
-                            <p className="timeline-subtitle">CS 110: Principles of Computer Systems</p>
-                            <ul className="timeline-bullets">
-                                <li>Led weekly section discussions for 30+ undergraduate students on multiprocessing, pipe redirection, and custom threads.</li>
-                                <li>Graded coding assignments in C++ and answered questions on thread synchronization, mutexes, and file descriptors.</li>
-                                <li>Re-designed the autograder scripting pipeline, cutting lab grading turnaround time in half.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div className="timeline-item">
-                        <div className="timeline-dot"></div>
-                        <div className="timeline-date">Jan 2024 - Jun 2024</div>
-                        <div className="timeline-content glass-panel">
-                            <h3 className="timeline-title">Undergraduate Researcher <span className="text-cyan">@ Stanford NLP Group</span></h3>
-                            <p className="timeline-subtitle">Large Language Models Reasoning Project</p>
-                            <ul className="timeline-bullets">
-                                <li>Fine-tuned open-weight models (Llama-3, Mistral) on chain-of-thought mathematical reasoning benchmarks.</li>
-                                <li>Authored custom evaluation scripts in Python using HuggingFace libraries to run model zero-shot inference tests.</li>
-                                <li>Co-authored a workshop submission on the impacts of diverse prompt formatting on reasoning outputs.</li>
+                                <li>Learned the foundations of deep learning, how to build neural networks, and how to lead successful machine learning projects.</li>
+                                <li>Gained practical experience with Python, TensorFlow, and PyTorch for various AI applications.</li>
                             </ul>
                         </div>
                     </div>
@@ -275,7 +254,6 @@ function Home() {
                             <SkillBar label="Python" percent={95} />
                             <SkillBar label="C++ / C" percent={88} />
                             <SkillBar label="TypeScript / JavaScript" percent={90} />
-                            <SkillBar label="Go" percent={75} />
                         </div>
                     </div>
                     <div className="skills-category glass-panel">
@@ -285,9 +263,7 @@ function Home() {
                         </div>
                         <div className="skills-list">
                             <SkillBar label="React / Next.js" percent={90} />
-                            <SkillBar label="Node.js / Express" percent={85} />
                             <SkillBar label="PyTorch / TensorFlow" percent={80} />
-                            <SkillBar label="Django / FastAPI" percent={82} />
                         </div>
                     </div>
                     <div className="skills-category glass-panel">
@@ -297,21 +273,16 @@ function Home() {
                         </div>
                         <div className="skills-list">
                             <SkillBar label="Git & GitHub" percent={95} />
-                            <SkillBar label="Docker" percent={80} />
                             <SkillBar label="Linux & Shell Scripting" percent={85} />
-                            <SkillBar label="Kubernetes / AWS" percent={65} />
                         </div>
                     </div>
                     <div className="skills-category glass-panel">
                         <div className="skills-category-header">
                             <i className="fa-solid fa-database category-icon text-green"></i>
-                            <h3>Databases & Cloud</h3>
+                            <h3>Databases</h3>
                         </div>
                         <div className="skills-list">
                             <SkillBar label="PostgreSQL / MySQL" percent={85} />
-                            <SkillBar label="MongoDB / Redis" percent={80} />
-                            <SkillBar label="GraphQL / REST APIs" percent={90} />
-                            <SkillBar label="Firebase / Supabase" percent={85} />
                         </div>
                     </div>
                 </div>
@@ -326,18 +297,12 @@ function Home() {
                         <p className="contact-lead">I am currently looking for new Summer 2027 internship opportunities or open-source collaborations!</p>
                         <p className="contact-desc">Whether you have a question, want to talk about distributed systems, or just want to say hi, my inbox is always open.</p>
                         <div className="contact-details">
-                            <div className="detail-item">
-                                <i className="fa-solid fa-location-dot detail-icon text-cyan"></i>
-                                <div>
-                                    <h4 className="detail-label">Location</h4>
-                                    <p className="detail-value">Stanford, CA, USA</p>
-                                </div>
-                            </div>
+
                             <div className="detail-item">
                                 <i className="fa-solid fa-envelope detail-icon text-purple"></i>
                                 <div>
                                     <h4 className="detail-label">Email</h4>
-                                    <a href="mailto:alex@example.com" className="detail-value text-link">alex@example.com</a>
+                                    <a href="mailto:muhammad.bhatti486@gmail.com" className="detail-value text-link">muhammad.bhatti486@gmail.com</a>
                                 </div>
                             </div>
                         </div>

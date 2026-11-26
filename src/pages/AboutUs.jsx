@@ -55,10 +55,10 @@ function AboutUs() {
                 <div className="about-grid" style={{ marginBottom: "80px" }}>
                     <div className="about-text">
                         <p>
-                            Hello! My name is <span className="highlight-text">Alex Chen</span> and I enjoy building things that live on the internet—and deep inside operating systems. My journey in computer science started back in 2020 when I tried modifying a Python web scraper to download online manga. I ended up accidentally DoS-ing a website, learning about TCP rate limiting, and never looked back.
+                            Hello! My name is <span className="highlight-text">Muhammad Faizan Bhatti</span> and I enjoy building things that live on the internet—and deep inside operating systems. My journey in computer science started back in 2020 when I tried modifying a Python web scraper to download online manga. I ended up accidentally DoS-ing a website, learning about TCP rate limiting, and never looked back.
                         </p>
                         <p>
-                            Fast-forward to today, and I've had the privilege of working as a Software Engineering Intern at <span className="highlight-text">TechCorp</span>, serving as a Head Teaching Assistant for Operating Systems, and contributing to several popular open-source CLI tools and libraries.
+                            Fast-forward to today, and I've focused my learning on advanced technologies like machine learning, computer vision, and NLP, while actively building projects to expand my skillset.
                         </p>
                         <p>
                             I believe great software is more than functional code. It should be <span className="highlight-text">correct</span>, <span className="highlight-text">observable</span>, and <span className="highlight-text">maintainable</span> by the next developer who reads it—even if that developer is future me at 2am.
@@ -66,12 +66,8 @@ function AboutUs() {
 
                         <div style={{ display: "flex", gap: "1.5rem", marginTop: "2rem", flexWrap: "wrap" }}>
                             <div style={{ textAlign: "center" }}>
-                                <div style={{ fontSize: "2rem", fontWeight: "800", color: "var(--accent-color)" }}>3.94</div>
-                                <div style={{ fontSize: "0.8rem", color: "var(--text-muted)", fontFamily: "'JetBrains Mono', monospace" }}>GPA / 4.00</div>
-                            </div>
-                            <div style={{ textAlign: "center" }}>
-                                <div style={{ fontSize: "2rem", fontWeight: "800", color: "var(--cyan)" }}>6+</div>
-                                <div style={{ fontSize: "0.8rem", color: "var(--text-muted)", fontFamily: "'JetBrains Mono', monospace" }}>Projects Built</div>
+                                <div style={{ fontSize: "2rem", fontWeight: "800", color: "var(--cyan)" }}>10+</div>
+                                <div style={{ fontSize: "0.8rem", color: "var(--text-muted)", fontFamily: "'JetBrains Mono', monospace" }}>GitHub Projects</div>
                             </div>
                             <div style={{ textAlign: "center" }}>
                                 <div style={{ fontSize: "2rem", fontWeight: "800", color: "var(--purple)" }}>3+</div>
@@ -79,7 +75,7 @@ function AboutUs() {
                             </div>
                             <div style={{ textAlign: "center" }}>
                                 <div style={{ fontSize: "2rem", fontWeight: "800", color: "var(--green)" }}>1</div>
-                                <div style={{ fontSize: "0.8rem", color: "var(--text-muted)", fontFamily: "'JetBrains Mono', monospace" }}>Industry Internship</div>
+                                <div style={{ fontSize: "0.8rem", color: "var(--text-muted)", fontFamily: "'JetBrains Mono', monospace" }}>Coursera Cert</div>
                             </div>
                         </div>
                     </div>
@@ -90,22 +86,21 @@ function AboutUs() {
                         <div style={{ textAlign: "center", marginBottom: "2rem" }}>
                             <div className="avatar-wrapper" style={{ width: "160px", height: "160px", margin: "0 auto 1rem" }}>
                                 <div className="avatar-glow"></div>
-                                <img src={avatarImg} alt="Alex Chen" className="avatar-img" />
+                                <img src={avatarImg} alt="Muhammad Faizan Bhatti" className="avatar-img" />
                             </div>
-                            <h3 style={{ fontWeight: "700", fontSize: "1.2rem" }}>Alex Chen</h3>
+                            <h3 style={{ fontWeight: "700", fontSize: "1.2rem" }}>Muhammad Faizan Bhatti</h3>
                             <p style={{ color: "var(--text-muted)", fontSize: "0.9rem", fontFamily: "'JetBrains Mono', monospace" }}>
-                                CS @ Stanford University '27
+                                CS @ Bahria University Islamabad '27
                             </p>
                         </div>
 
                         <h3 className="card-title"><i className="fa-solid fa-graduation-cap"></i> Education</h3>
                         <div className="edu-item">
                             <div className="edu-header">
-                                <span className="edu-school">Stanford University</span>
+                                <span className="edu-school">Bahria University Islamabad</span>
                                 <span className="edu-date">2023 – 2027</span>
                             </div>
-                            <div className="edu-degree">B.S. in Computer Science (Systems Track)</div>
-                            <div className="edu-gpa"><span className="badge">GPA: 3.94 / 4.00</span></div>
+                            <div className="edu-degree">B.S. in Computer Science</div>
                         </div>
                         <div className="edu-item">
                             <div className="edu-header">
@@ -218,7 +213,7 @@ function AboutUs() {
                     <p style={{ color: "var(--text-secondary)", marginBottom: "2rem", maxWidth: "500px", margin: "0 auto 2rem" }}>
                         I'm always open to interesting conversations about systems, ML, or open-source projects. Don't hesitate to reach out!
                     </p>
-                    <a href="mailto:alex@example.com" className="btn btn-primary" style={{ fontSize: "1.05rem", padding: "0.9rem 2.5rem" }}>
+                    <a href="mailto:muhammad.bhatti486@gmail.com" className="btn btn-primary" style={{ fontSize: "1.05rem", padding: "0.9rem 2.5rem" }}>
                         <i className="fa-solid fa-envelope"></i> Get in Touch
                     </a>
                 </div>

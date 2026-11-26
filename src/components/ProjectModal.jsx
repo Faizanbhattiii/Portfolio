@@ -1,142 +1,143 @@
 import React, { useEffect } from "react";
 
 const PROJECTS_DATA = {
-    p1: {
-        title: "Choreographer OS",
-        tags: ["C", "x86 Assembly", "QEMU", "Linker Scripts"],
-        category: "Systems",
-        desc: "A custom 32-bit preemptive multitasking kernel built from scratch to study kernel abstractions, memory allocation, and CPU architectures.",
-        bullets: [
-            "Written in assembly and C to interface directly with virtualized x86 hardware platforms (tested in QEMU and VirtualBox).",
-            "Designed a custom Virtual Memory Manager implementing page translation, identity mapping, dynamic page frames, and custom heap allocator.",
-            "Built dynamic scheduling models featuring a round-robin preemptive scheduler using PIT interrupt ticks.",
-            "Implements virtual consoles, system calls (syscalls via software interrupt 0x80), keyboard driver, and basic shell interpreter."
-        ],
-        design: `+------------------------------------------------------------+
-|                       Shell / Programs                     |
-+------------------------------------------------------------+
-|       Syscalls (0x80) | Key Events | Screen Output         |
-+------------------------------------------------------------+
-|                         OS Kernel                          |
-|  [Scheduler]    [VMM / Heap]    [FAT Filesystem]           |
-+------------------------------------------------------------+
-|                       Hardware (x86)                       |
-+------------------------------------------------------------+`,
-        github: "https://github.com",
-        demo: null
-    },
-    p2: {
-        title: "Git-Visualizer",
-        tags: ["TypeScript", "React", "D3.js", "Web Workers"],
-        category: "Web Apps",
-        desc: "An educational web interface built to help CS students visualize the internal Git directed acyclic graph (DAG) and master operations like interactive rebase and cherry-pick.",
-        bullets: [
-            "Uses D3.js force-directed layouts to render commits, references, heads, and tags with beautiful visual nodes.",
-            "Compiles a micro-Git interpreter inside the browser context, simulating staging area, commit operations, checkout, and branch merging.",
-            "Features interactive tutorial courses with automated verification schemas checking the user's local tree against the goal state.",
-            "Utilizes Web Workers to parse local Git repositories uploaded by users without transferring files to external servers."
-        ],
-        design: `+-------------+      +-------------------+      +-------------+
-| User input  | ---> |   Git Emulator    | ---> | D3 Node Tree|
-| (Interactive|      |   (JS In-Memory)  |      | Visualizer  |
-|  Term / UI) |      +-------------------+      +-------------+
-+-------------+                |
-                               v
-                     +-------------------+
-                     | Tutorial Validator|
-                     +-------------------+`,
-        github: "https://github.com",
-        demo: "https://example.com"
-    },
     p3: {
-        title: "NeuralArt-Transfer",
-        tags: ["Python", "PyTorch", "CUDA", "OpenCV"],
+        title: "Seeker AI",
+        tags: ["TypeScript", "React", "Vite", "AI/ML"],
         category: "AI & ML",
-        desc: "A machine learning pipeline utilizing convolutional networks to transfer artistic styles to videos while maintaining temporal smoothness between successive frames.",
+        desc: "An intelligent AI-powered seeker application built with React and TypeScript for smart search, discovery, and information retrieval.",
         bullets: [
-            "Implements Gatys' neural style transfer algorithm utilizing pretrained VGG-19 features for content and style losses.",
-            "Added temporal consistency constraint using optical flow estimation (Farneback method via OpenCV) to penalize style changes on moving objects.",
-            "Optimized CUDA memory allocation strategies, allowing style transfers on full 1080p video sequences at 12fps on consumer hardware.",
-            "Features automated style palette synthesis using color histograms, allowing users to preserve the original video's color scheme."
+            "Built with React, TypeScript, and Vite for fast, type-safe frontend interactions.",
+            "Designed intelligent search and discovery workflows for streamlined information retrieval.",
+            "Structured modular components with ESLint and clean TypeScript interfaces."
         ],
-        design: `+-------------+
-| Input Frame | --+
-+-------------+   |     +-------------------------+      +--------------+
-                  +---> | Loss = Content + Style  | ---> | Neural Frame |
-+-------------+   |     |      + Temporal Flow    |      +--------------+
-| Style Image | --+     +-------------------------+
-+-------------+`,
-        github: "https://github.com",
+        design: null,
+        github: "https://github.com/Faizanbhattiii/SEEKER_AI",
         demo: null
-    },
-    p4: {
-        title: "KeySync Distributed DB",
-        tags: ["Go", "gRPC", "Protobuf", "Raft Consensus"],
-        category: "Systems",
-        desc: "A highly available, strongly consistent key-value store built in Go using the Raft consensus algorithm. Designed to withstand network partitions and system restarts.",
-        bullets: [
-            "Implements complete Raft consensus protocol including leader election, log replication, membership changes, and log compaction.",
-            "Created customized gRPC server interfaces enabling low latency inter-node communication.",
-            "Engineered robust snapshotting triggers to limit disk and memory usage, ensuring database recovery from persistent WAL logs.",
-            "Tested against Jepsen network partition simulators to guarantee strict linearizability on key-value operations."
-        ],
-        design: `   +---------+  Heartbeat / Append  +---------+
-   | Raft-A  | -------------------> | Raft-B  |
-   | (Leader)| <------------------- |(Follower)|
-   +---------+     Commit Status    +---------+
-        |
-        | State Apply
-        v
-   +---------+
-   | LSM-Tree|
-   | DB Engine|
-   +---------+`,
-        github: "https://github.com",
-        demo: null
-    },
-    p5: {
-        title: "DevScribe Markdown",
-        tags: ["JavaScript", "Next.js", "Yjs", "WebRTC", "Supabase"],
-        category: "Web Apps",
-        desc: "A real-time collaborative Markdown editor that supports multi-user editing, visual conflicts resolution, and automated exports.",
-        bullets: [
-            "Utilizes Conflict-free Replicated Data Types (CRDTs via Yjs library) to allow concurrent client edits with zero server merge friction.",
-            "Uses peer-to-peer WebRTC signalling tunnels for document syncing, with Supabase PostgreSQL as backup database storage.",
-            "Implements markdown parsing featuring LaTeX syntax support (via KaTeX) and Mermaid.js diagram compilation.",
-            "Provides an online presentation view that automatically converts slides from Markdown headings."
-        ],
-        design: `+----------+            WebRTC P2P             +----------+
-| Client A | <-------------------------------> | Client B |
-+----------+                                   +----------+
-     \\                                              /
-      \\-- Backup Sync --> +--------------+ <-------/
-                          | Supabase DB  |
-                          +--------------+`,
-        github: "https://github.com",
-        demo: "https://example.com"
     },
     p6: {
-        title: "EyeAssist ML",
-        tags: ["Python", "FastAPI", "YOLOv8", "WebSockets"],
+        title: "AI Driving Assistant",
+        tags: ["Dart", "Flutter", "Computer Vision", "AI/ML"],
         category: "AI & ML",
-        desc: "An accessibility web application converting dynamic webcam feeds into custom voice and system commands using computer vision.",
+        desc: "An AI-powered mobile driving assistant built with Flutter and Dart to provide real-time driving guidance and intelligent navigation support.",
         bullets: [
-            "Fine-tuned custom YOLOv8 model layers on a dataset of 15 essential sign-language gestures, achieving 94.6% mAP metrics.",
-            "Utilizes WebSockets to pipe webcam stream frames from the frontend React view directly to FastAPI pipeline processing threads.",
-            "Implements automated text-to-speech feedback engines via browser audio context Web Speech API.",
-            "Integrated system command shortcuts, enabling disabled developers to scroll, select text, and trigger code builds via gestures."
+            "Developed cross-platform mobile interface using Flutter and Dart.",
+            "Designed real-time driving assistance and intelligent guidance workflows.",
+            "Focused on clean, responsive UI suited for in-vehicle readability."
         ],
-        design: `+--------------+   WebSocket Frame   +--------------+
-| Browser Feed | ------------------> | FastAPI Host |
-| (Webcam/Web) | <------------------ | (YOLO Model) |
-+--------------+   Gesture Results   +--------------+
-        |
-        v Audio Event
-+--------------+
-| Web Speech   |
-| (Voice UI)   |
-+--------------+`,
-        github: "https://github.com",
+        design: null,
+        github: "https://github.com/Faizanbhattiii/AI-Driving-assistant",
+        demo: null
+    },
+    p7: {
+        title: "TaskFlow Platform",
+        tags: ["React 18", "Express", "Tailwind CSS", "Cloudinary"],
+        category: "Web Apps",
+        desc: "A full-stack task management application engineered with React 18, Vite, Express, Tailwind CSS, and Cloudinary with emphasis on web performance, accessibility, SEO, and cross-device responsiveness.",
+        bullets: [
+            "Built full-stack task management workflows with React 18 on the frontend and Express on the backend.",
+            "Integrated Cloudinary for media and file handling alongside Tailwind CSS for responsive styling.",
+            "Focused on accessibility, SEO, and cross-device UI polish."
+        ],
+        design: null,
+        github: "https://github.com/Faizanbhattiii/TaskFlow-Full-Stack-Task-Management-Platform",
+        demo: null
+    },
+    p8: {
+        title: "World Explorer — Live Data App",
+        tags: ["JavaScript", "React", "REST API", "Search & Filter"],
+        category: "Web Apps",
+        desc: "A responsive React single-page application showcasing complete network request lifecycle management (Loading, Success, Empty, and Error states) when consuming a live public API.",
+        bullets: [
+            "Consumes live public API data with robust Loading, Success, Empty, and Error UI states.",
+            "Implements responsive search and filtering across fetched records.",
+            "Built as a fast, interactive React single-page application."
+        ],
+        design: null,
+        github: "https://github.com/Faizanbhattiii/live-data-app",
+        demo: null
+    },
+    p9: {
+        title: "Task CRUD + Automated Test Suite",
+        tags: ["JavaScript", "React", "Vitest", "Supertest"],
+        category: "Web Apps",
+        desc: "A full-stack Task Management application featuring an automated, multi-layer testing architecture.",
+        bullets: [
+            "Frontend unit and component testing implemented with Vitest and React Testing Library (RTL).",
+            "Backend API and route testing implemented with Vitest and Supertest using an in-memory store.",
+            "Full CRUD task lifecycle with verified automated test coverage."
+        ],
+        design: null,
+        github: "https://github.com/Faizanbhattiii/CRUD-Application-with-Automated-Test-Suite",
+        demo: null
+    },
+    p10: {
+        title: "Flowspace SaaS Landing",
+        tags: ["JavaScript", "HTML/CSS", "Glassmorphism", "UI/UX"],
+        category: "Web Apps",
+        desc: "A modern, responsive landing page for an all-in-one task prioritization and deep focus app built for software engineering and product design teams.",
+        bullets: [
+            "Designed with a sleek dark aesthetic and glassmorphic UI elements.",
+            "Built responsive layouts tailored for cross-device viewing.",
+            "Interactive landing page sections highlighting product workflows."
+        ],
+        design: null,
+        github: "https://github.com/Faizanbhattiii/Flowspace",
+        demo: null
+    },
+    p11: {
+        title: "Analytics Dashboard with Charts",
+        tags: ["JavaScript", "React", "Zustand", "Charts"],
+        category: "Web Apps",
+        desc: "A CRUD, authentication, and profile application refactored with Zustand for global state management, with consistent loading skeletons and empty states across all surfaces.",
+        bullets: [
+            "Refactored global application state using Zustand for clean, predictable updates.",
+            "Implemented consistent loading skeletons and empty states across dashboard views.",
+            "Includes authentication, profile management, and interactive chart visualizations."
+        ],
+        design: null,
+        github: "https://github.com/Faizanbhattiii/Analytics-Dashboard-with-Charts",
+        demo: null
+    },
+    p12: {
+        title: "Agri Twin",
+        tags: ["HTML", "CSS", "JavaScript"],
+        category: "Web Apps",
+        desc: "An agriculture-focused web project built with clean HTML, CSS, and interactive front-end components.",
+        bullets: [
+            "Structured responsive web interface for agriculture-oriented content.",
+            "Built with semantic HTML and custom styling."
+        ],
+        design: null,
+        github: "https://github.com/Faizanbhattiii/agri_twin",
+        demo: null
+    },
+    p13: {
+        title: "Drag-and-Drop File Uploader",
+        tags: ["React", "Axios", "Express", "Cloudinary"],
+        category: "Web Apps",
+        desc: "A reusable drag-and-drop file uploader component built with React, Axios, and Tailwind CSS, backed by an Express server with server-side validation and streaming uploads to Cloudinary CDN.",
+        bullets: [
+            "Built drag-and-drop UI with real upload progress tracking via Axios.",
+            "Backed by an Express server enforcing strict server-side file validation.",
+            "Streams validated uploads directly to Cloudinary CDN."
+        ],
+        design: null,
+        github: "https://github.com/Faizanbhattiii/file-upload",
+        demo: null
+    },
+    p14: {
+        title: "Multi-Field Validated Form",
+        tags: ["JavaScript", "React", "Express", "Validation"],
+        category: "Web Apps",
+        desc: "A full-stack Edit Profile application demonstrating two independent layers of validation: client-side for immediate UX feedback, and server-side as the real security gate.",
+        bullets: [
+            "Implements client-side multi-field validation for instant user feedback.",
+            "Enforces independent server-side validation as the authoritative security boundary.",
+            "Clean full-stack Edit Profile workflow."
+        ],
+        design: null,
+        github: "https://github.com/Faizanbhattiii/Multi-Field-Validated-Form-Client-Server-",
         demo: null
     }
 };

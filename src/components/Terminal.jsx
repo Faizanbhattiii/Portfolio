@@ -4,9 +4,9 @@ import { useTheme } from "../context/ThemeContext.jsx";
 function Terminal() {
     const { toggleTheme } = useTheme();
     const [lines, setLines] = useState([
-        { text: "System initialized. Welcome to Alex Chen's Interactive Terminal.", type: "text-cyan" },
+        { text: "System initialized. Welcome to Muhammad Faizan Bhatti's Interactive Terminal.", type: "text-cyan" },
         { text: "Type 'help' to see list of available commands, or try 'skills' or 'sudo rm -rf'.", type: "text-muted" },
-        { text: '<span class="terminal-prompt">visitor@alexchen.dev:~$</span> <span class="text-white">neofetch</span>', type: "raw" }
+        { text: '<span class="terminal-prompt">visitor@mfbhatti.dev:~$</span> <span class="text-white">neofetch</span>', type: "raw" }
     ]);
     const [history, setHistory] = useState([]);
     const [historyIdx, setHistoryIdx] = useState(-1);
@@ -59,7 +59,7 @@ function Terminal() {
     const executeCommand = (cmd) => {
         // Echo command line
         const echoLine = {
-            text: `<span class="terminal-prompt">visitor@alexchen.dev:~$</span> <span class="text-white">${escapeHTML(cmd)}</span>`,
+            text: `<span class="terminal-prompt">visitor@mfbhatti.dev:~$</span> <span class="text-white">${escapeHTML(cmd)}</span>`,
             type: "raw"
         };
         
@@ -83,43 +83,37 @@ function Terminal() {
                 }];
                 break;
             case "about":
-                responseLines = [{ text: "Alex Chen - CS Student @ Stanford University. Passionate about Operating Systems, Networks, and Machine Learning.", type: "text-cyan" }];
+                responseLines = [{ text: "Muhammad Faizan Bhatti - CS Student @ Bahria University Islamabad. Passionate about Operating Systems, Networks, and Machine Learning.", type: "text-cyan" }];
                 break;
             case "skills":
                 responseLines = [{
                     text: `<span class="text-purple">Languages:</span>
-  Python, C/C++, Go, TypeScript, HTML/CSS, SQL, Assembly
+  Python, C/C++, TypeScript, JavaScript
 <span class="text-purple">Frameworks:</span>
-  React, Next.js, Node.js, PyTorch, Django, Supabase, Tailwind CSS
+  React, Next.js, PyTorch, TensorFlow
 <span class="text-purple">DevOps & Databases:</span>
-  Git, Docker, Kubernetes, Linux/Bash, PostgreSQL, MongoDB, Redis`,
+  Git, Linux, PostgreSQL, MySQL`,
                     type: "raw"
                 }];
                 break;
             case "projects":
                 responseLines = [{
-                    text: `<span class="text-green">Featured Projects:</span>
-  - <span class="text-white">Choreographer OS</span> [C/x86 Assembly]: A preemptive multitasking operating system kernel.
-  - <span class="text-white">Git-Visualizer</span> [TS/React/D3]: Real-time commit graph rendering tool.
-  - <span class="text-white">NeuralArt-Transfer</span> [Python/PyTorch]: Temporally consistent style transfer.
-  - <span class="text-white">KeySync Distributed DB</span> [Go/gRPC]: Distributed key-value store using Raft.`,
+                    text: `<span class="text-green">GitHub Projects:</span>\n  - <span class="text-white">Seeker AI</span> [TypeScript/React]\n  - <span class="text-white">AI Driving Assistant</span> [Dart/Flutter]\n  - <span class="text-white">TaskFlow Platform</span> [React/Express]\n  - <span class="text-white">World Explorer</span> [React/REST API]\n  - <span class="text-white">Task CRUD + Test Suite</span> [Vitest/Supertest]\n  - <span class="text-white">Flowspace</span> [JavaScript/UI]`,
                     type: "raw"
                 }];
                 break;
             case "experience":
                 responseLines = [{
-                    text: `<span class="text-cyan">SWE Intern @ TechCorp</span> [Summer 2025]
-  Optimized container communication with gRPC, reducing latency by 18%.
-<span class="text-cyan">Head Teaching Assistant @ Stanford CS</span> [Fall 2024 - Present]
-  CS 110: Principles of Computer Systems.
-<span class="text-cyan">Undergraduate Researcher @ Stanford NLP</span> [Jan 2024 - Jun 2024]
-  Reasoning evaluation frameworks for LLMs.`,
+                    text: `<span class="text-cyan">Certifications:</span>
+<span class="text-purple">Deep Learning Specialization @ Coursera</span>
+  - Learned the foundations of deep learning, neural networks, and AI project leadership.
+  - Gained practical experience with Python, TensorFlow, and PyTorch.`,
                     type: "raw"
                 }];
                 break;
             case "contact":
                 responseLines = [{
-                    text: `Email: <a href='mailto:alex@example.com' class='text-cyan'>alex@example.com</a><br>GitHub: <a href='https://github.com' target='_blank' class='text-cyan'>github.com</a><br>LinkedIn: <a href='https://linkedin.com' target='_blank' class='text-cyan'>linkedin.com</a>`,
+                    text: `Email: <a href='mailto:muhammad.bhatti486@gmail.com' class='text-cyan'>muhammad.bhatti486@gmail.com</a><br>GitHub: <a href='https://github.com' target='_blank' class='text-cyan'>github.com</a><br>LinkedIn: <a href='https://linkedin.com' target='_blank' class='text-cyan'>linkedin.com</a>`,
                     type: "raw"
                 }];
                 break;
@@ -178,7 +172,7 @@ function Terminal() {
                     <span className="t-btn t-minimize"></span>
                     <span className="t-btn t-expand"></span>
                 </div>
-                <div className="terminal-title">bash - visitor@alexchen.dev:~</div>
+                <div className="terminal-title">bash - visitor@mfbhatti.dev:~</div>
                 <div className="terminal-actions">
                     <span className="terminal-tag"><i className="fa-solid fa-terminal"></i> Interactive Shell</span>
                 </div>
@@ -207,21 +201,20 @@ function Terminal() {
    \\_______/`}
                             </pre>
                             <div className="neofetch-info">
-                                <div><span className="text-purple">alex@stanford.edu</span></div>
+                                <div><span className="text-purple">muhammad.bhatti486@gmail.com</span></div>
                                 <div>--------------------</div>
-                                <div><span className="text-cyan">OS:</span> Stanford ArchLinux v2026.06</div>
+                                <div><span className="text-cyan">OS:</span> Bahria ArchLinux v2026.06</div>
                                 <div><span class="text-cyan">Host:</span> Brain (AI-Powered) v1.0.0</div>
                                 <div><span class="text-cyan">Kernel:</span> C++20 / Python3.11 / WebTech</div>
                                 <div><span class="text-cyan">Uptime:</span> 3 years of hard learning</div>
                                 <div><span class="text-cyan">Shell:</span> Custom JS Command Shell</div>
-                                <div><span class="text-cyan">GPA:</span> 3.94 / 4.00</div>
                                 <div><span class="text-cyan">Terminal Theme:</span> Neon Glass</div>
                             </div>
                         </div>
                     )}
                 </div>
                 <div className="terminal-input-line">
-                    <span className="terminal-prompt">visitor@alexchen.dev:~$</span>
+                    <span className="terminal-prompt">visitor@mfbhatti.dev:~$</span>
                     <input 
                         type="text" 
                         className="terminal-input" 

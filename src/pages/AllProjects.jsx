@@ -4,48 +4,71 @@ import ProjectModal from "../components/ProjectModal.jsx";
 
 const ALL_PROJECTS = [
     {
-        id: "p1", title: "Choreographer OS", category: "systems",
-        desc: "A lightweight, preemptive multitasking Operating System kernel built from scratch for x86 architecture. Implements paging, IPC, and custom FAT-like filesystem.",
-        tags: ["C", "x86 Assembly", "Make", "QEMU"],
-        github: "https://github.com", demo: null
+        id: "p3", title: "Seeker AI", category: "ai",
+        desc: "An intelligent AI-powered seeker application built with React and TypeScript for smart search, discovery, and information retrieval.",
+        tags: ["TypeScript", "React", "Vite", "AI/ML"],
+        github: "https://github.com/Faizanbhattiii/SEEKER_AI", demo: null
     },
     {
-        id: "p2", title: "Git-Visualizer", category: "web",
-        desc: "An interactive, web-based tool that visualizes git commit trees, branches, and merges in real-time. Features interactive rebasing drills for students.",
-        tags: ["TypeScript", "React", "D3.js", "Node.js"],
-        github: "https://github.com", demo: "https://example.com"
+        id: "p6", title: "AI Driving Assistant", category: "ai",
+        desc: "An AI-powered mobile driving assistant built with Flutter and Dart to provide real-time driving guidance and intelligent navigation support.",
+        tags: ["Dart", "Flutter", "Computer Vision", "AI/ML"],
+        github: "https://github.com/Faizanbhattiii/AI-Driving-assistant", demo: null
     },
     {
-        id: "p3", title: "NeuralArt-Transfer", category: "ai",
-        desc: "A deep neural style transfer pipeline implemented in PyTorch that allows users to stylize videos while maintaining temporal consistency across frames.",
-        tags: ["Python", "PyTorch", "OpenCV", "Docker"],
-        github: "https://github.com", demo: null
+        id: "p7", title: "TaskFlow Platform", category: "web",
+        desc: "A full-stack task management application engineered with React 18, Vite, Express, Tailwind CSS, and Cloudinary with focus on performance and accessibility.",
+        tags: ["React 18", "Express", "Tailwind CSS", "Cloudinary"],
+        github: "https://github.com/Faizanbhattiii/TaskFlow-Full-Stack-Task-Management-Platform", demo: null
     },
     {
-        id: "p4", title: "KeySync Distributed DB", category: "systems",
-        desc: "A strongly consistent, distributed key-value store using Raft consensus protocol. Supports dynamic cluster reconfigurations, snapshots, and heartbeats.",
-        tags: ["Go", "gRPC", "Protobuf", "Raft"],
-        github: "https://github.com", demo: null
+        id: "p8", title: "World Explorer", category: "web",
+        desc: "A responsive React single-page application showcasing full network request lifecycle management, search, and filtering with a live public API.",
+        tags: ["JavaScript", "React", "REST API", "Search & Filter"],
+        github: "https://github.com/Faizanbhattiii/live-data-app", demo: null
     },
     {
-        id: "p5", title: "DevScribe Markdown", category: "web",
-        desc: "Collaborative Markdown editor with live preview, auto-save, PDF exports, and version history. Uses CRDTs for seamless conflict-free collaborative editing.",
-        tags: ["JavaScript", "Next.js", "Yjs", "Supabase"],
-        github: "https://github.com", demo: "https://example.com"
+        id: "p9", title: "Task CRUD + Automated Test Suite", category: "web",
+        desc: "A full-stack task management application featuring an automated multi-layer testing architecture with Vitest, React Testing Library, and Supertest.",
+        tags: ["JavaScript", "React", "Vitest", "Supertest"],
+        github: "https://github.com/Faizanbhattiii/CRUD-Application-with-Automated-Test-Suite", demo: null
     },
     {
-        id: "p6", title: "EyeAssist ML", category: "ai",
-        desc: "A computer vision accessibility tool designed to translate real-time hand gestures into text and audio commands to help blind users navigate interfaces.",
-        tags: ["Python", "FastAPI", "YOLOv8", "WebSockets"],
-        github: "https://github.com", demo: null
+        id: "p10", title: "Flowspace SaaS Landing", category: "web",
+        desc: "A modern, responsive landing page for an all-in-one task prioritization and deep focus app featuring a dark aesthetic and glassmorphic UI elements.",
+        tags: ["JavaScript", "HTML/CSS", "Glassmorphism", "UI/UX"],
+        github: "https://github.com/Faizanbhattiii/Flowspace", demo: null
+    },
+    {
+        id: "p11", title: "Analytics Dashboard", category: "web",
+        desc: "A CRUD, auth, and profile application refactored with Zustand for global state management, featuring consistent loading skeletons, empty states, and charts.",
+        tags: ["JavaScript", "React", "Zustand", "Charts"],
+        github: "https://github.com/Faizanbhattiii/Analytics-Dashboard-with-Charts", demo: null
+    },
+    {
+        id: "p12", title: "Agri Twin", category: "web",
+        desc: "An agriculture-focused web project built with clean HTML, CSS, and interactive front-end components.",
+        tags: ["HTML", "CSS", "JavaScript"],
+        github: "https://github.com/Faizanbhattiii/agri_twin", demo: null
+    },
+    {
+        id: "p13", title: "Drag-and-Drop File Uploader", category: "web",
+        desc: "A reusable drag-and-drop file uploader component built with React, Axios, and Tailwind CSS, backed by an Express server and Cloudinary CDN.",
+        tags: ["React", "Axios", "Express", "Cloudinary"],
+        github: "https://github.com/Faizanbhattiii/file-upload", demo: null
+    },
+    {
+        id: "p14", title: "Multi-Field Validated Form", category: "web",
+        desc: "A full-stack Edit Profile application demonstrating two independent layers of validation: client-side UX feedback and server-side security validation.",
+        tags: ["JavaScript", "React", "Express", "Validation"],
+        github: "https://github.com/Faizanbhattiii/Multi-Field-Validated-Form-Client-Server-", demo: null
     },
 ];
 
 const FILTERS = [
     { key: "all", label: "All Projects", icon: "fa-grid-2" },
-    { key: "systems", label: "Systems", icon: "fa-microchip" },
-    { key: "web", label: "Web Apps", icon: "fa-globe" },
     { key: "ai", label: "AI & ML", icon: "fa-brain" },
+    { key: "web", label: "Web Apps", icon: "fa-globe" },
 ];
 
 function AllProjects() {
@@ -148,7 +171,7 @@ function AllProjects() {
                         Technologies Across All Projects
                     </h3>
                     <div style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
-                        {["C", "x86 Assembly", "Go", "Python", "TypeScript", "React", "D3.js", "PyTorch", "CUDA", "gRPC", "Protobuf", "Yjs", "WebRTC", "FastAPI", "YOLOv8", "Docker", "QEMU", "Raft", "Next.js", "Supabase", "PostgreSQL", "WebSockets", "OpenCV", "Node.js"].map(tech => (
+                        {["TypeScript", "JavaScript", "Dart", "React", "Flutter", "Express", "Tailwind CSS", "Zustand", "Vitest", "Cloudinary", "Vite"].map(tech => (
                             <span key={tech} style={{
                                 fontFamily: "'JetBrains Mono', monospace",
                                 fontSize: "0.78rem",

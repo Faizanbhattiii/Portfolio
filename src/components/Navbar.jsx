@@ -33,7 +33,7 @@ function Navbar() {
             <header className={`navbar ${scrolled ? "scrolled" : ""}`} id="main-nav">
                 <div class="nav-container">
                     <Link to="/" className="logo" id="nav-logo" onClick={closeDrawer}>
-                        <span className="logo-terminal">&lt;</span>AlexChen<span className="logo-terminal"> /&gt;</span>
+                        <span className="logo-terminal">&lt;</span>MFaizanBhatti<span className="logo-terminal"> /&gt;</span>
                     </Link>
                     
                     <nav className="nav-links" id="nav-menu">
